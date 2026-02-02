@@ -45,7 +45,6 @@ declare module "atom" {
     "atom-typescript.extensionsFromGrammars": boolean
     "atom-typescript.tsSyntaxScopes": string[]
     "atom-typescript.jsSyntaxScopes": string[]
-    "atom-typescript.allowJS": boolean
     "atom-typescript.tsserverInstancePerTsconfig": boolean
     "atom-typescript.longLineLength": number
     "atom-typescript.largeFileLineCount": number
@@ -94,7 +93,6 @@ declare module "atom" {
       extensionsFromGrammars: boolean
       tsSyntaxScopes: string[]
       jsSyntaxScopes: string[]
-      allowJS: boolean
       tsserverInstancePerTsconfig: boolean
       longLineLength: number
       largeFileLineCount: number

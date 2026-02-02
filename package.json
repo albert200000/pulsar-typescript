@@ -1,5 +1,5 @@
 {
-  "name": "atom-typescript",
+  "name": "atom-typescript-updated",
   "version": "14.4.0",
   "main": "./loader.js",
   "bundle": "./dist/main.js",
@@ -7,7 +7,8 @@
   "description": "The only TypeScript plugin you will ever need.",
   "atomTestRunner": "./node_modules/atom-ts-spec-runner/runner.js",
   "activationHooks": [
-    "language-typescript:grammar-used"
+    "language-typescript:grammar-used",
+    "language-javascript:grammar-used"
   ],
   "activationCommands": {
     "atom-workspace": [
@@ -347,13 +348,6 @@
       ],
       "order": 160
     },
-    "allowJS": {
-      "title": "Enable Atom-Typescript for JavaScript files (experimental)",
-      "description": "Passes JS files to TypeScript server; Most likely need allowJS: true and checkJS: true in tsconfig",
-      "type": "boolean",
-      "default": false,
-      "order": 170
-    },
     "tsserverInstancePerTsconfig": {
       "title": "Spawn separate tsserver instance for each tsconfig.json",
       "description": "This option helps avoid confusion when multiple projects are referincing the same file, but can prevent external definition files (d.ts) from reloading when changed. Changing this option requires Atom restart.",
@@ -460,14 +454,14 @@
       }
     }
   },
-  "homepage": "https://github.com/TypeStrong/atom-typescript",
+  "homepage": "https://github.com/albert200000/atom-typescript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TypeStrong/atom-typescript.git"
+    "url": "https://github.com/albert200000/atom-typescript.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TypeStrong/atom-typescript/issues"
+    "url": "https://github.com/albert200000/atom-typescript/issues"
   },
   "dependencies": {
     "typescript": "^4.2.3"
