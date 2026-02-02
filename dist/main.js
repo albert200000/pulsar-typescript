@@ -59,7 +59,6 @@ $parcel$export(module.exports, "provideCodeHighlight", function () { return $64e
 
 function $2893351583386024$export$8080b7556d9d6445(promise) {
     if (promise === undefined) return;
-    // tslint:disable-next-line:strict-type-predicates no-unbound-method
     if (typeof promise["catch"] !== "function") {
         atom.notifications.addFatalError("Atom-Typescript: non-promise passed to handlePromise. Please report this.", {
             stack: new Error().stack,
@@ -171,7 +170,6 @@ function $ee93806a41573bb4$export$c2a999eb584410f0(x) {
 }
 var $ee93806a41573bb4$export$8b10423be8ce987b = function() {
     var codeToCategory;
-    // tslint:disable-next-line: only-arrow-functions
     return function(code, category) {
         if (code === undefined) return true;
         if (codeToCategory === undefined) codeToCategory = new Map(Object.values((0, ($parcel$interopDefault($8qw4J$typescript))).Diagnostics).map(function(x) {
@@ -194,7 +192,6 @@ var $ee93806a41573bb4$export$8b10423be8ce987b = function() {
 function $cf8cb216522ae432$var$eventLoopYielder(delayMs, maxTimeMs) {
     var started = performance.now();
     var lastYield = started;
-    // tslint:disable-next-line: only-arrow-functions
     return function() {
         return (/*#__PURE__*/ 0, /*#__PURE__*/ $8qw4J$swchelperscjs_async_to_generatorcjs._)(function() {
             var now;
@@ -508,12 +505,10 @@ function $7580a2909a181bf5$export$d121654372a91687() {
 
 
 function $495e5651dd8d899e$var$getElStartLine(elem) {
-    // tslint:disable-next-line: no-string-literal
     var v = elem.dataset["startLine"];
     return v !== undefined ? parseInt(v, 10) - 1 : 0;
 }
 function $495e5651dd8d899e$var$getElEndLine(elem) {
-    // tslint:disable-next-line: no-string-literal
     var v = elem.dataset["endLine"];
     return v !== undefined ? parseInt(v, 10) - 1 : 0;
 }
@@ -1256,7 +1251,6 @@ $4759e62349e0b646$export$a3a95952d8506109.instance = null;
 
 
 
-// tslint:disable:max-classes-per-file
 
 
 
@@ -1460,7 +1454,6 @@ var $15c8165b6fc0c3c1$export$21f68d6aa461e875 = /*#__PURE__*/ function() {
         this.emitter = new (0, $8qw4J$atom.Emitter)();
         this.seq = 0;
         this.lastStderrOutput = "";
-        // tslint:disable-next-line:member-ordering
         this.on = this.emitter.on.bind(this.emitter);
         this.exitHandler = function(err) {
             var report = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
@@ -1791,7 +1784,6 @@ function $c628f355f099b93a$export$369fb36245591db0(sourcePath, binBaseName) {
                 case 1:
                     resolvedPath = _state.sent();
                     packagePath = $8qw4J$path.resolve(resolvedPath, "../../package.json");
-                    // tslint:disable-next-line:no-unsafe-any
                     version = require(packagePath).version;
                     return [
                         2,
@@ -1981,11 +1973,9 @@ function $c628f355f099b93a$var$resolveConfigFile(initialBaseDir) {
     })();
 }
 function $c628f355f099b93a$var$isConfigObject(x) {
-    // tslint:disable-next-line: no-unsafe-any
     return (typeof x === "undefined" ? "undefined" : (0, $8qw4J$swchelperscjs_type_ofcjs._)(x)) === "object" && x !== null && typeof x.tsdkPath === "string";
 }
 function $c628f355f099b93a$var$isVSCodeConfigObject(x) {
-    // tslint:disable-next-line: no-unsafe-any
     return (typeof x === "undefined" ? "undefined" : (0, $8qw4J$swchelperscjs_type_ofcjs._)(x)) === "object" && x !== null && typeof x["typescript.tsdk"] === "string";
 }
 function $c628f355f099b93a$var$getSDKPath(dirname) {
@@ -2062,7 +2052,6 @@ var $656dc62ff40b3cc7$export$dceb19333e080e82 = /*#__PURE__*/ function() {
         this.subscriptions = new (0, $8qw4J$atom.CompositeDisposable)();
         this.tsserverInstancePerTsconfig = atom.config.get("atom-typescript-updated").tsserverInstancePerTsconfig;
         // This is just here so TypeScript can infer the types of the callbacks when using "on" method
-        // tslint:disable-next-line:member-ordering
         this.on = this.emitter.on.bind(this.emitter);
         this.diagnosticHandler = function(serverPath, type) {
             return function(result) {
@@ -2310,7 +2299,6 @@ var $656dc62ff40b3cc7$export$dceb19333e080e82 = /*#__PURE__*/ function() {
     return ClientResolver;
 }();
 function $656dc62ff40b3cc7$var$isConfDiagBody(body) {
-    // tslint:disable-next-line:no-unsafe-any
     return body && body.triggerFile && body.configFile;
 }
 
@@ -2530,7 +2518,6 @@ function $002ef260a7981892$export$2c9a28f937ef04fb(data, etch, codeRenderer) {
                     kind = etch.dom("div", {
                         className: "atom-typescript-datatip-tooltip-kind"
                     }, data.kind, $002ef260a7981892$var$formatKindModifiers(data.kindModifiers));
-                    // tslint:disable-next-line: strict-boolean-expressions // TODO: complain on TS
                     tags = data.tags ? data.tags.map(function(tag) {
                         var tagClass = "atom-typescript-datatip-tooltip-doc-tag " + "atom-typescript-datatip-tooltip-doc-tag-name-".concat(tag.name);
                         return etch.dom("div", {
@@ -3991,7 +3978,6 @@ var $2a2076bfbea7a68e$export$536c67bf76d43cfb = /*#__PURE__*/ function() {
                                 ];
                                 _reply_body = (0, $8qw4J$swchelperscjs_sliced_to_arraycjs._)(reply.body, 1), details = _reply_body[0];
                                 // apparently, details can be undefined
-                                // tslint:disable-next-line: strict-boolean-expressions
                                 if (!details) return [
                                     2,
                                     null
@@ -5751,7 +5737,6 @@ function $8a39902ae655894e$export$530eb201df098d49(options) {
                     switch(_state.label){
                         case 0:
                             location = editor.getPath();
-                            // tslint:disable-next-line: strict-boolean-expressions
                             if (!location) return [
                                 2
                             ];
@@ -5769,7 +5754,6 @@ function $8a39902ae655894e$export$530eb201df098d49(options) {
                             ];
                         case 1:
                             newLocation = _state.sent();
-                            // tslint:disable-next-line: strict-boolean-expressions
                             if (!newLocation) return [
                                 2
                             ];
@@ -9310,7 +9294,6 @@ var $26f43d04544e9b7a$export$6932e15e784422f9 = /*#__PURE__*/ function() {
         this.events = new $8qw4J$atom.Emitter();
         this.compileOnSave = false;
         this.subscriptions = new $8qw4J$atom.CompositeDisposable();
-        // tslint:disable-next-line:member-ordering
         this.on = this.events.on.bind(this.events);
         this.dispose = function() {
             return (/*#__PURE__*/ 0, /*#__PURE__*/ $8qw4J$swchelperscjs_async_to_generatorcjs._)(function() {
@@ -9824,8 +9807,7 @@ var $a568bbacdc99572d$export$a0bbaae59860162e = /*#__PURE__*/ function() {
     ], [
         {
             key: "createFactory",
-            value: // tslint:disable-next-line:member-ordering
-            function createFactory(opts) {
+            value: function createFactory(opts) {
                 return function(editor) {
                     var tep = TypescriptEditorPane.editorMap.get(editor);
                     if (!tep) {
@@ -9838,8 +9820,7 @@ var $a568bbacdc99572d$export$a0bbaae59860162e = /*#__PURE__*/ function() {
         },
         {
             key: "lookupPane",
-            value: // tslint:disable-next-line:member-ordering
-            function lookupPane(editor) {
+            value: function lookupPane(editor) {
                 return TypescriptEditorPane.editorMap.get(editor);
             }
         }
@@ -10132,7 +10113,6 @@ var $8655349229b8a3fd$export$f2c0a16002429d72 = /*#__PURE__*/ function() {
         this.histGoForward = function(ed, opts) {
             return _this.editorPosHist.goForward(ed, opts);
         };
-        // tslint:disable-next-line:member-ordering
         this.drawPending = (0, $8qw4J$lodash.throttle)(function(pending) {
             return (0, $2893351583386024$export$8080b7556d9d6445)(_this.statusPanel.update({
                 pending: pending

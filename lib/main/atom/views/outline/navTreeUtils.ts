@@ -3,13 +3,11 @@ import {NavigationTree} from "typescript/lib/protocol"
 import {NavigationTreeViewModel} from "./semanticViewModel"
 
 function getElStartLine(elem: HTMLElement): number {
-  // tslint:disable-next-line: no-string-literal
   const v = elem.dataset["startLine"]
   return v !== undefined ? parseInt(v, 10) - 1 : 0
 }
 
 function getElEndLine(elem: HTMLElement): number {
-  // tslint:disable-next-line: no-string-literal
   const v = elem.dataset["endLine"]
   return v !== undefined ? parseInt(v, 10) - 1 : 0
 }

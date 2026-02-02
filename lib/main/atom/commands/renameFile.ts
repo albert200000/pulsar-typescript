@@ -6,7 +6,6 @@ addCommand("atom-text-editor", "typescript:rename-file", (deps) => ({
   description: "Rename current file",
   async didDispatch(editor) {
     const location = editor.getPath()
-    // tslint:disable-next-line: strict-boolean-expressions
     if (!location) return
 
     const newLocation = await showRenameDialog({
@@ -21,7 +20,6 @@ addCommand("atom-text-editor", "typescript:rename-file", (deps) => ({
       },
     })
 
-    // tslint:disable-next-line: strict-boolean-expressions
     if (!newLocation) return
 
     const client = await deps.getClient(location)

@@ -176,7 +176,6 @@ export class AutocompleteProvider implements ACP.AutocompleteProvider {
     if (!reply.body) return null
     const [details] = reply.body
     // apparently, details can be undefined
-    // tslint:disable-next-line: strict-boolean-expressions
     if (!details) return null
     let parts = details.displayParts
     if (

@@ -12,7 +12,6 @@ export async function renderTooltip(
     </div>
   )
 
-  // tslint:disable-next-line: strict-boolean-expressions // TODO: complain on TS
   const tags = data.tags
     ? data.tags.map((tag) => {
         const tagClass =

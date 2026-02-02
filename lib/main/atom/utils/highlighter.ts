@@ -4,7 +4,6 @@ import type {LanguageMode} from "./highlighter-types"
 function eventLoopYielder(delayMs: number, maxTimeMs: number) {
   const started = performance.now()
   let lastYield = started
-  // tslint:disable-next-line: only-arrow-functions
   return async function (): Promise<boolean> {
     const now = performance.now()
     if (now - lastYield > delayMs) {

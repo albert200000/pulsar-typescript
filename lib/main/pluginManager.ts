@@ -383,7 +383,6 @@ export class PluginManager {
     )
   }
 
-  // tslint:disable-next-line:member-ordering
   private drawPending = throttle(
     (pending: Array<{title: string}>) => handlePromise(this.statusPanel.update({pending})),
     100,

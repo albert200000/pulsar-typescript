@@ -36,7 +36,6 @@ export class TooltipController {
     bufferPt: Atom.Point,
   ) {
     const rawView = atom.views.getView(editor)
-    // tslint:disable-next-line: one-variable-per-declaration
     let curCharPixelPt, nextCharPixelPt
     try {
       curCharPixelPt = rawView.pixelPositionForBufferPosition(bufferPt)

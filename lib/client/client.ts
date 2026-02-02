@@ -1,4 +1,3 @@
-// tslint:disable:max-classes-per-file
 import {BufferedNodeProcess, BufferedProcess, Emitter} from "atom"
 import byline from "byline"
 import {ChildProcess} from "child_process"
@@ -90,7 +89,6 @@ export class TypescriptServiceClient {
   private server?: ChildProcess
   private lastStderrOutput = ""
 
-  // tslint:disable-next-line:member-ordering
   public on = this.emitter.on.bind(this.emitter)
 
   constructor(

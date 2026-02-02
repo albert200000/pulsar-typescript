@@ -37,7 +37,6 @@ export class TypescriptBuffer {
   private subscriptions = new Atom.CompositeDisposable()
   private openPromise: Promise<void>
 
-  // tslint:disable-next-line:member-ordering
   public on = this.events.on.bind(this.events)
 
   private constructor(public buffer: Atom.TextBuffer, private deps: Deps) {

@@ -171,7 +171,6 @@ type ElementClassConstructor<T extends JSX.ElementClass> = new (
   children: JSX.Element[],
 ) => T
 
-// tslint:disable-next-line:no-namespace
 declare namespace JSX {
   interface IntrinsicElements {
     // SVG
@@ -230,7 +229,6 @@ declare module "etch" {
   export function setScheduler(customScheduler: any): void
   export function update(component: any, replaceNode?: boolean): Promise<void>
   export function updateSync(component: any, replaceNode?: boolean): void
-  // tslint:disable-next-line:class-name
   export interface dom {
     // HTML
     a(props: EtchAttributes, ...children: ChildSpec[]): JSX.Element

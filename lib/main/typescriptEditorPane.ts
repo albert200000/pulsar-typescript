@@ -15,7 +15,6 @@ interface PaneOptions {
 
 export class TypescriptEditorPane {
   private static editorMap = new WeakMap<Atom.TextEditor, TypescriptEditorPane>()
-  // tslint:disable-next-line:member-ordering
   public static createFactory(
     opts: PaneOptions,
   ): (editor: Atom.TextEditor) => TypescriptEditorPane {
@@ -28,7 +27,6 @@ export class TypescriptEditorPane {
       return tep
     }
   }
-  // tslint:disable-next-line:member-ordering
   public static lookupPane(editor: Atom.TextEditor): TypescriptEditorPane | undefined {
     return TypescriptEditorPane.editorMap.get(editor)
   }

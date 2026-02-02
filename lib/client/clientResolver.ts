@@ -35,7 +35,6 @@ export class ClientResolver {
   private tsserverInstancePerTsconfig =
     atom.config.get("atom-typescript-updated").tsserverInstancePerTsconfig
   // This is just here so TypeScript can infer the types of the callbacks when using "on" method
-  // tslint:disable-next-line:member-ordering
   public on = this.emitter.on.bind(this.emitter)
 
   constructor(private reportBusyWhile: ReportBusyWhile) {}
@@ -121,6 +120,5 @@ export class ClientResolver {
 }
 
 function isConfDiagBody(body: any): body is ConfigFileDiagnosticEventBody {
-  // tslint:disable-next-line:no-unsafe-any
   return body && body.triggerFile && body.configFile
 }

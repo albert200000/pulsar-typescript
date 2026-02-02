@@ -49,7 +49,6 @@ export async function resolveBinary(
   })
 
   const packagePath = path.resolve(resolvedPath, "../../package.json")
-  // tslint:disable-next-line:no-unsafe-any
   const version: string = require(packagePath).version
 
   return {
@@ -114,11 +113,9 @@ async function resolveConfigFile(initialBaseDir: string) {
 }
 
 function isConfigObject(x: any): x is ConfigObject {
-  // tslint:disable-next-line: no-unsafe-any
   return typeof x === "object" && x !== null && typeof x.tsdkPath === "string"
 }
 function isVSCodeConfigObject(x: any): x is VSCodeConfigObject {
-  // tslint:disable-next-line: no-unsafe-any
   return typeof x === "object" && x !== null && typeof x["typescript.tsdk"] === "string"
 }
 

@@ -14,7 +14,6 @@ import type {
 
 // NOTE: using TypeScript internals here. May be brittle!
 declare module "typescript" {
-  // tslint:disable-next-line: variable-name
   export const Diagnostics: {
     [key: string]: DiagnosticMessage
   }
@@ -122,10 +121,8 @@ export function partsToStr(x: Array<{text: string}>): string {
   return x.map((i) => i.text).join("")
 }
 
-// tslint:disable-next-line: only-arrow-functions
 export const checkDiagnosticCategory = (function () {
   let codeToCategory: Map<number, ts.DiagnosticCategory> | undefined
-  // tslint:disable-next-line: only-arrow-functions
   return function (code: number | undefined, category: ts.DiagnosticCategory) {
     if (code === undefined) return true
     if (codeToCategory === undefined) {
