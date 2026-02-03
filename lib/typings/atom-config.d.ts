@@ -11,12 +11,9 @@ declare module "atom" {
     "atom-typescript-updated.autocompletionStrictFilterIgnoreCase": boolean
     "atom-typescript-updated.autocompletionStrictFilterLongestMatchFirst": boolean
     "atom-typescript-updated.locale": string
-    "atom-typescript-updated.preferBuiltinBusySignal": boolean
-    "atom-typescript-updated.preferBuiltinOccurrenceHighlight": boolean
     "atom-typescript-updated.disableAtomIdeDefinitions": boolean
     "atom-typescript-updated.buildStatusTimeout": number
     "atom-typescript-updated.getErrDebounceTimeout": number
-    "atom-typescript-updated.occurrenceHighlightDebounceTimeout": number
     "atom-typescript-updated.showSemanticView": boolean
     "atom-typescript-updated.autocompleteParens": boolean
     "atom-typescript-updated.includeCompletionsForModuleExports": boolean
@@ -53,12 +50,9 @@ declare module "atom" {
       autocompletionStrictFilterIgnoreCase: boolean
       autocompletionStrictFilterLongestMatchFirst: boolean
       locale: string
-      preferBuiltinBusySignal: boolean
-      preferBuiltinOccurrenceHighlight: boolean
       disableAtomIdeDefinitions: boolean
       buildStatusTimeout: number
       getErrDebounceTimeout: number
-      occurrenceHighlightDebounceTimeout: number
       showSemanticView: boolean
       autocompleteParens: boolean
       includeCompletionsForModuleExports: boolean

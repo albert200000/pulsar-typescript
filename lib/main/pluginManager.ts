@@ -24,7 +24,6 @@ import {
 import {registerCommands} from "./atom/commands"
 import {StatusPanel, TBuildStatus, TProgress} from "./atom/components/statusPanel"
 import {EditorPositionHistoryManager} from "./atom/editorPositionHistoryManager"
-import {OccurrenceManager} from "./atom/occurrence/manager"
 import {isTypescriptEditorWithPath, spanToRange, TextSpan} from "./atom/utils"
 import {SemanticViewController} from "./atom/views/outline/semanticViewController"
 import {SymbolsViewController} from "./atom/views/symbols/symbolsViewController"
@@ -53,7 +52,6 @@ export class PluginManager {
   private semanticViewController: SemanticViewController
   private symbolsViewController: SymbolsViewController
   private editorPosHist: EditorPositionHistoryManager
-  private occurrenceManager: OccurrenceManager
   private pending = new Set<{title: string}>()
   private busySignalService?: BusySignalService
   private typescriptPaneFactory: (editor: Atom.TextEditor) => TypescriptEditorPane
@@ -88,9 +86,6 @@ export class PluginManager {
       getClient: this.getClient,
     })
     this.subscriptions.add(this.symbolsViewController)
-
-    this.occurrenceManager = new OccurrenceManager(this.getClient)
-    this.subscriptions.add(this.occurrenceManager)
 
     this.typescriptPaneFactory = TypescriptEditorPane.createFactory({
       clearFileErrors: this.clearFileErrors,
@@ -191,7 +186,6 @@ export class PluginManager {
   }
 
   public consumeBusySignal(busySignalService: BusySignalService): void | Atom.DisposableLike {
-    if (atom.config.get("atom-typescript-updated").preferBuiltinBusySignal) return
     this.busySignalService = busySignalService
     const disp = {
       dispose: () => {
@@ -238,8 +232,6 @@ export class PluginManager {
   }
 
   public provideCodeHighlight() {
-    if (atom.config.get("atom-typescript-updated").preferBuiltinOccurrenceHighlight) return
-    this.occurrenceManager.dispose()
     return getCodeHighlightProvider(this.getClient)
   }
 

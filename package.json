@@ -133,20 +133,6 @@
       "default": "en",
       "order": 50
     },
-    "preferBuiltinBusySignal": {
-      "title": "Prefer built-in busy status indicator",
-      "description": "Use built-in busy status indicator instead of Atom-IDE one (if available); Change requires Atom restart",
-      "type": "boolean",
-      "default": false,
-      "order": 57
-    },
-    "preferBuiltinOccurrenceHighlight": {
-      "title": "Prefer built-in occurrence highligting",
-      "description": "Use built-in occurrence highlights instead of Atom-IDE one (if available); Change requires Atom restart",
-      "type": "boolean",
-      "default": false,
-      "order": 58
-    },
     "disableAtomIdeDefinitions": {
       "title": "Disable Atom-IDE Definitions interface",
       "description": "Atom-IDE will revert to using Hyperclick for go-to-definition; Atom-Typescript will be able to track position history and return-from-declaration command will work; you will lose fancy previews on ctrl/cmd+mouseover though; Change requires Atom restart",
@@ -167,13 +153,6 @@
       "type": "number",
       "default": "150",
       "order": 65
-    },
-    "occurrenceHighlightDebounceTimeout": {
-      "title": "Occurrence Highlight Debounce Timeout",
-      "description": "How long to wait before showing ocurrence highlights, in ms; low values may cause slowdowns on large projects",
-      "type": "number",
-      "default": "300",
-      "order": 66
     },
     "showSemanticView": {
       "title": "Show semantic view",
