@@ -429,21 +429,6 @@
       }
     ]
   ],
-  "targets": {
-    "bundle": {
-      "context": "electron-renderer",
-      "engines": {
-        "electron": ">=12.x"
-      },
-      "includeNodeModules": {
-        "atom": false,
-        "electron": false,
-        "typescript": false
-      },
-      "outputFormat": "commonjs",
-      "isLibrary": true
-    }
-  },
   "keywords": [
     "typescript",
     "javascript",
